@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_projectsubtask</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_projectsubtask` (
+  `projectsubtaskid` int(11) NOT NULL,
+  `projectsubtaskname` varchar(255) default NULL,
+  `projectsubtask_no` varchar(100) default NULL,
+  `projectsubtasktype` varchar(100) default NULL,
+  `projectsubtaskpriority` varchar(100) default NULL,
+  `projectsubtaskprogress` varchar(100) default NULL,
+  `projectsubtaskhours` varchar(255) default NULL,
+  `startdate` date default NULL,
+  `enddate` date default NULL,
+  `projecttaskid` varchar(100) default NULL,
+  `projectsubtasknumber` int(11) default NULL,
+  PRIMARY KEY  (`projectsubtaskid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_projectsubtaskcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_projectsubtaskcf` (
+  `projectsubtaskid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`projectsubtaskid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

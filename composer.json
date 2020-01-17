@@ -1,0 +1,28 @@
+{
+	"name": "corebos/projectsubtask",
+	"type": "corebos-module",
+	"properties": {
+		"name": "Project Subtask module",
+		"description": "coreBOS Project Subtasks are steps to be taken in order to accomplish a Project Task",
+		"keywords": ["project","task","microtasks"],
+		"homepage": "http://corebos.org/documentation/doku.php?id=en:extensions:extensions:projectsubtask",
+		"version": "1.0",
+		"time": "2020-01-14",
+		"license": "Vizsage",
+		"extra": {
+			"price": "0",
+			"distribution": "Free",
+		},
+		"authors": [
+					{
+					"name": "JPL TSolucio, S.L.",
+					"email": "info(at)tsolucio(dot)com"
+					}
+		"support": {
+				"email": "info(at)tsolucio(dot)com",
+				"issues": "https://github.com/coreBOS/ProjectSubTask",
+				"forum": "http://discussions.corebos.org/",
+				"source": "https://github.com/coreBOS/ProjectSubTask"
+		}
+	}
+}

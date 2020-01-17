@@ -124,7 +124,12 @@ class ProjectSubTask extends CRMEntity {
 	 */
 	public function vtlib_handler($modulename, $event_type) {
 		if ($event_type == 'module.postinstall') {
-			$this->setModuleSeqNumber('configure', $modulename, 'prjsbt-', '0000001');
+			$this->setModuleSeqNumber('configure', $modulename, 'prjsbt-', '000000001');
+			$modPST=Vtiger_Module::getInstance('ProjectSubTask');
+			$modPrjTask=Vtiger_Module::getInstance('ProjectTask');
+			if ($modPrjTask) {
+				$modPrjTask->setRelatedList($modPST, 'ProjectSubTask', array('ADD'), 'get_dependents_list');
+			}
 		} elseif ($event_type == 'module.disabled') {
 			// TODO Handle actions when this module is disabled.
 		} elseif ($event_type == 'module.enabled') {
